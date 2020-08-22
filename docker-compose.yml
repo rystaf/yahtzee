@@ -1,0 +1,23 @@
+version: '3'
+services:
+  frontend-build:
+    container_name: frontend-build
+    tty: true
+    ports:
+      - "35729:35729"
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    volumes: 
+      - ./src:/srv/src
+      - ./webpack.config.js:/srv/webpack.config.js
+      - ./postcss.config.js:/srv/postcss.config.js
+      - ./babel.config.json:/srv/babel.config.json
+      - ./dist:/srv/dist
+    command: npm run watch
+  web:
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./dist:/usr/share/nginx/html

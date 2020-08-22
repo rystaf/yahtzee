@@ -1,0 +1,35 @@
+.side1 .pl, .side1 .pr,
+.side2 .pm, .side2 .pt.pr, .side2 .pb.pl,
+.side3 .pm.pl, .side3 .pm.pr, .side3 .pt.pl, .side3 .pb.pr,
+.side4 .pm,
+.side5 .pm.pl, .side5 .pm.pr,
+.side6 .pmm{
+  display: none;
+}
+.pt.pl {
+  transform: translate(25px,25px);
+}
+.pm.pl {
+  transform: translate(25px,50px);
+}
+.pb.pl {
+  transform: translate(25px,75px);
+}
+.pt.pr {
+  transform: translate(75px,25px);
+}
+.pm.pr {
+  transform: translate(75px,50px);
+}
+.pb.pr {
+  transform: translate(75px,75px);
+}
+.pmm {
+  transform: translate(50px,50px);
+}
+.pt.pm {
+  transform: translate(50px,25px);
+}
+.pb.pm {
+  transform: translate(50px,75px);
+}
